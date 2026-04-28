@@ -10,7 +10,7 @@ export function createApp(): express.Application {
 
   app.use(express.json());
 
-app.use("/api/cards", cardRoutes); 
+  app.use("/api/cards", cardRoutes);
 
   app.use(errorHandler);
 

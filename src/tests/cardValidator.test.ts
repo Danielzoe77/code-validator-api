@@ -1,5 +1,5 @@
 import request from "supertest";
-import {createApp} from "../app";
+import { createApp } from "../app";
 
 /**
  * Integration test to verify that the card validation
@@ -10,7 +10,7 @@ describe("POST /api/cards/validate", () => {
     const validCard = "4539578763621486"; // Valid VISA test number
 
     const res = await request(createApp())
-    
+
       .post("/api/cards/validate")
       .send({ cardNumber: validCard });
 
